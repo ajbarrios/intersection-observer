@@ -4,8 +4,7 @@
   "description": "IntersectionObserver demo",
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "live-server"
   },
   "author": "Antonio José Barrios León",
   "license": "ISC",

@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --default-circle-color: orange;
+    --circle-dirty-color: lime;
+    --default-circle-font-color: white;
+    --default-circle-radio: 10vh;
+    --default-header-color: orange;
+}
+
+header {
+    background-color: var(--default-header-color);
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    font-family: Arial;
+    height: 10vh;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 6px 7px grey
+}
+
+.intersection-scrollable {
+    border: 2px solid var(--default-header-color);
+    height: 100vh;
+    overflow: scroll;
+}
+
+#drawing-area {
+    height: 50vh;
+    width: 150vw;
+}
+
+.circle {
+    width: var(--default-circle-radio);
+    height: var(--default-circle-radio);
+    color: var(--default-circle-font-color);
+    border-radius: 100%;
+    background-color: var(--default-circle-color);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    font-weight: bold;
+    border: 1px solid transparent;
+    box-shadow: 1px 2px grey;
+}
+
+.circle.dirty {
+    background-color: var(--circle-dirty-color);
+}
+
+.circle:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: transform .5s ease-in-out;
+    z-index: 1;
+}
